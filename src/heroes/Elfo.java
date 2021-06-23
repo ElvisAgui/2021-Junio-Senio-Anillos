@@ -25,7 +25,7 @@ public class Elfo extends Heroe {
 
     @Override
     public String DatosEnte() {
-        return "Soy un Elfo " + ataqueMaximo + ", nombre=" + nombre + ", vida=" + vida + " y odio a los Orcos";
+        return "Soy un Elfo " +"ni ataque maximo es "+ ataqueMaximo + ", Mi nombre es " + nombre + ", vida= " + vida+" puntos armadura "+getArmadura() + " y odio a los Orcos  ";
     }
     
 }

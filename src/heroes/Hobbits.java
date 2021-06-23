@@ -21,7 +21,7 @@ public class Hobbits extends Heroe {
 
     @Override
     public String DatosEnte() {
-        return "Soy un Hobbit " + ataqueMaximo + ", nombre=" + nombre + ", vida=" + vida + " y Temo a los Trasgos";
+        return "Soy un Hobbit, Mi ataque maximo es " + ataqueMaximo + " Mi nombre es " + nombre + " mi vida es " + vida +" puntos armadura "+getArmadura()+ " y Temo a los Trasgos";
     }
     
    

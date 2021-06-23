@@ -11,7 +11,7 @@ public class Humano extends Heroe{
     
     @Override
     public String DatosEnte() {
-        return "Soy un Humano " + ataqueMaximo + ", nombre=" + nombre + ", vida=" + vida + " ";
+        return "Soy un Humano Mi ataque maximo es " + ataqueMaximo + ", Mi nombre es " + nombre + ", vida " + vida +" puntos armadura "+getArmadura();
     }
 
 }

@@ -12,6 +12,6 @@ public class Orcos extends Bestias {
 
     @Override
     public String DatosEnte() {
-        return "Soy un Orco " + ataqueMaximo + ", nombre=" + nombre + ", vida=" + vida + " Y soy super Fuerte ";
+        return "Soy un Orco Mi ataque maximo es " + ataqueMaximo + " Mi nombre es" + nombre + " Mi vida es" + vida +" puntos armadura "+getArmadura() + " Y soy super Fuerte ";
     }
 }

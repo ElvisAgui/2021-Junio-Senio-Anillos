@@ -32,20 +32,28 @@ public class Ente {
 
     public void ataqueEnemigo(Ente enemigo){
         System.out.println("-----------------------------------------------------------------------------");
-        System.out.println("Personajes en Pelea "+this.getNombre()+"mis puntos de vida son; "+this.getVida()+" contra "+enemigo.getNombre()+"mis puntos de vida son; "+enemigo.getVida());
+        System.out.println("Personajes en Pelea "+this.getNombre()+" mis puntos de vida son; "+this.getVida()+" contra "+enemigo.getNombre()+" mis puntos de vida son; "+enemigo.getVida());
         System.out.println(this.getNombre()+" Estooy atacando a: "+enemigo.getNombre());
         
         if (this.aumentoAtaque(enemigo) > enemigo.diminucionArmadura(this)) {
-            enemigo.setVida(this.getAtaque() - enemigo.getArmadura());
+            int daño = daño(enemigo);
+            enemigo.setVida(daño);
             System.out.println("*******Exelente, Mi ataque fue mayor a su Defensa******");
         }else{
             System.out.println("------oh!!, No logre hacerle daño por su armadura------");
         }   
     
         System.out.println("-----Fin de la Pelea-----");
-        System.out.println(" "+this.getNombre()+"mis puntos de vida son; "+this.getVida()+" contra "+enemigo.getNombre()+"mis puntos de vida son; "+enemigo.getVida());
-        System.out.println("----------------------------------------------------------------------------");
+        System.out.println(" "+this.getNombre()+" mis puntos de vida son; "+this.getVida()+" contra "+enemigo.getNombre()+" mis puntos de vida son; "+enemigo.getVida());
+        System.out.println("----------------------------------------------------------------------------\n\n");
         
+    }
+    private int daño(Ente enemigo){
+        int daño = this.aumentoAtaque(enemigo) - enemigo.diminucionArmadura(this);
+        if (daño <= 0) {
+            daño *= -1; 
+        }
+        return daño;
     }
 
     public String getNombre() {
